@@ -1,0 +1,16 @@
+{
+  "id": "linux-plus-xk0-005",
+  "name": "CompTIA Linux+ (XK0-005)",
+  "short_name": "Linux+",
+  "vendor": "CompTIA",
+  "code": "XK0-005",
+  "status": "ready",
+  "curriculum": "linux_plus",
+  "description": "Python for Linux administration: scripts, logs, users, permissions, networking, services, backups, and testing.",
+  "domains": [
+    "1.0 System Management",
+    "2.0 Security",
+    "3.0 Scripting, Containers, and Automation",
+    "4.0 Troubleshooting"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "linux-plus-xk0-006",
+  "name": "CompTIA Linux+ (XK0-006)",
+  "short_name": "Linux+",
+  "vendor": "CompTIA",
+  "code": "XK0-006",
+  "status": "ready",
+  "curriculum": "pack",
+  "description": "Hands-on Linux administration for XK0-006: boot and storage, users and services, security hardening, automation, containers, and troubleshooting.",
+  "domains": [
+    "1.0 System Management",
+    "2.0 Services and User Management",
+    "3.0 Security",
+    "4.0 Automation, Orchestration, and Scripting",
+    "5.0 Troubleshooting"
+  ]
+}

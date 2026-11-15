@@ -39,6 +39,9 @@ class Mission:
     solution: dict[str, str] = field(default_factory=dict)
     setup: Callable[[Path], None] | None = None
     check: Callable[[Path], list[Check]] | None = None
+    # Optional hook used when installing the *reference* solution, for
+    # missions whose work is a command sequence (git, chmod, venv, ...).
+    post_install: Callable[[Path], None] | None = None
 
     def prepare(self, workspace: Path) -> Path:
         """Create the mission directory and any fixtures (idempotent)."""
@@ -186,4 +189,6 @@ def install_solution(mission: Mission, mdir: Path) -> list[Path]:
         if content.startswith("#!") or path.suffix == ".sh":
             path.chmod(0o755)
         written.append(path)
+    if mission.post_install is not None:
+        mission.post_install(mdir)
     return written
